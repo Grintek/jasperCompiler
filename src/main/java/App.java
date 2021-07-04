@@ -1,3 +1,4 @@
+import compiler.JasperCompiler;
 import net.sf.jasperreports.engine.*;
 
 import java.util.HashMap;
@@ -10,9 +11,7 @@ public class App {
         String fileNameJrxml = "/home/grisha/IdeaProjects/jasperCompiler/jasperCompiler/src/main/resources/jxml/RT06RNCB.jrxml";
         String fileNamePdf = "/home/grisha/IdeaProjects/jasperCompiler/jasperCompiler/src/main/resources/jxml//RT06RNCB.pdf";
 
-        JasperReport jasperReport = JasperCompileManager.compileReport(fileNameJrxml);
-        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, new HashMap<>(), new  JREmptyDataSource());
-        JasperExportManager.exportReportToPdfFile(jasperPrint, fileNamePdf);
-
+        JasperCompiler jasperCompiler = new JasperCompiler(fileNameJrxml, fileNamePdf);
+        jasperCompiler.print();
     }
 }

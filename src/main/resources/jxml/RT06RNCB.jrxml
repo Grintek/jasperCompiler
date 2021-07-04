@@ -53,6 +53,7 @@
 			<fieldDescription><![CDATA[_THIS]]></fieldDescription>
 		</field>
 	</subDataset>
+	<parameter name="subreport" class="com.bssys.sbns.report.ReportServiceImpl.Subreport" isForPrompting="false"/>
 	<parameter name="payments" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<field name="documentNumberDate" class="java.lang.String"/>
 	<field name="amountLiteral" class="java.lang.String"/>
